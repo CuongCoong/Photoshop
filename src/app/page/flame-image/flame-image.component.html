@@ -1,0 +1,35 @@
+<h1>Chèn khung ảnh</h1>
+<div class="list-flame">
+  <div class="list-flame__item">
+    <img id="img_frame" src="assets/flame/flame01.jpg" alt="" (click)="loadFrame('frame1')">
+    <img id="img_frame2" src="assets/flame/frame02.png" alt="" (click)="loadFrame('frame2')">
+    <img id="img_frame3" src="assets/flame/frame03.jpg" alt="" (click)="loadFrame('frame3')">
+    <img id="img_frame4" src="assets/flame/frame04.png" alt="" (click)="loadFrame('frame4')">
+    <img id="img_frame5" src="assets/flame/frame05.jpg" alt="" (click)="loadFrame('frame5')">
+    <img id="img_frame6" src="assets/flame/frame8.jpg" alt="" (click)="loadFrame('frame6')">
+    <img id="img_frame7" src="assets/flame/frame7.png" alt="" (click)="loadFrame('frame7')">
+    <img id="img_frame8" src="assets/flame/frame9.jpg" alt="" (click)="loadFrame('frame8')">
+
+  </div>
+</div>
+
+
+
+<div #tuiRef  class="frame-insert" >
+  <canvas id="canvas_frame"></canvas>
+</div>
+
+<!-- <button (click)="uploadImage()"></button> -->
+<div class="list-button">
+  <label for="choose-image">Chọn ảnh thêm vào khung</label>
+  <input
+      hidden
+      (change)="uploadImage($event)"
+      type="file"
+      id="choose-image"
+      class=""
+      style="cursor: pointer; ">
+
+  <button (click)="download()">Download</button>
+
+</div>
